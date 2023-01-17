@@ -31,7 +31,7 @@ export const ContactForm = ({ onSubmit }) => {
     number: '',
   };
   const handleSubmit = (values, { resetForm }) => {
-    onSubmit(values.name, values.number);
+    onSubmit({ ...values });
     resetForm();
   };
 
